@@ -1,6 +1,6 @@
 <template>
   
-  <div class="waku" v-on:click="change" >{{hyouji}}</div>
+  <div class="waku alert-info" v-on:click="change" >{{hyouji}}</div>
 </template>
 
 <script>
@@ -42,5 +42,6 @@ export default {
   line-height: 150px;
   font-size: 90px;
   text-align: center;
+  color: rgb(77, 184, 255);
 }
 </style>
