@@ -18,7 +18,10 @@ export default {
   },
   data(){
      return{
+       //手番用のカウント
        count:0
+       //勝敗判定用の配列
+      
      }
   },
   methods: {
