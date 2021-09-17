@@ -7,7 +7,11 @@
 export default {
     name:"Masu",
     props:{
-      count:Number
+      count:Number,
+      number:Number,
+
+      //?
+      check:String
     },
     data(){
       return{
@@ -16,17 +20,18 @@ export default {
     },
     methods: {
       change(){
+        console.log("key="+this.number)
+      
         if(this.count%2===0){
         this.hyouji="〇";
         // this.count++; countは親で管理する
         this.$emit('countadd',this.count)
-        console.log(this.count);
+        this.$emit('checkar',"〇")
         }else{
           this.hyouji="×";
           // this.count++
         this.$emit('countadd',this.count)
-
-          console.log(this.count);
+        this.$emit('checkar',"×")
 
         }
       }
