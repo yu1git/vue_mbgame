@@ -23,14 +23,14 @@ export default {
       count:0,
        //勝敗判定用の配列
       //check:[0,0,0,0,0,0,0,0,0],
-      check:{}
+      //check:{}
      }
   },
   methods: {
     countadd(){
       this.count++
     },
-    checkar(mb){
+    checkar(){
       // for(let i=0;i<9;i++){
       // if(this.check[i]===0){
       //   this.check[i]=mb;
@@ -38,9 +38,9 @@ export default {
       // }
       //this.check[i].push(mb);配列の後ろに追加してしまう
       //オブジェクトを使う？nを使えない
-      //this.$set(this.check,'n',mb);
-      
-      console.log(this.check);
+      //this.$set(this.check,nb,mb);
+      //this.check=mb;
+      //console.log(this.check);
     }
   },
 }

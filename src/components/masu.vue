@@ -1,6 +1,7 @@
 <template>
-  
+  <div>
   <div class="waku alert-info" v-on:click="change" >{{hyouji}}</div>
+  </div>
 </template>
 
 <script>
@@ -9,9 +10,9 @@ export default {
     props:{
       count:Number,
       number:Number,
-
+      //check:{Number:String}
       //?
-      check:String
+      //check:String
     },
     data(){
       return{
@@ -26,14 +27,18 @@ export default {
         this.hyouji="〇";
         // this.count++; countは親で管理する
         this.$emit('countadd',this.count)
-        this.$emit('checkar',"〇")
+        //this.$set(this.check,this.number,"〇")
+        //this.$emit('checkar',this.number,"〇")
         }else{
           this.hyouji="×";
           // this.count++
         this.$emit('countadd',this.count)
-        this.$emit('checkar',"×")
+        //this.$set(this.check,this.number,"×")
+
+        //this.$emit('checkar',this.number,"×")
 
         }
+        //console.log(this.check);
       }
     }
 }
